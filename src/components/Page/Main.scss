@@ -1,0 +1,48 @@
+.main-page {
+    position: relative;
+    padding-top: 90px;
+    padding-bottom: 270px;
+    @media (max-width: 770px) {
+        padding-top: 80px;
+    }
+    @media (max-width: 1025px) {
+        padding-bottom: 100px;
+    }
+    // padding-bottom: 100px;
+    background: #1d2532;
+    height: 100%;
+    width: 100vw;
+    &::after {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: 4%;
+        display: block;
+        width: 414.902px;
+        height: 414.902px;
+        border-radius: 414.902px;
+        background: linear-gradient(
+            171deg,
+            rgba(95, 56, 255, 0.35) 25.59%,
+            rgba(255, 14, 222, 0.35) 100.44%
+        );
+
+        filter: blur(86px);
+    }
+    &__content {
+    }
+
+    &__bg-modal {
+        display: none;
+        position: fixed;
+        padding: 0 15px;
+        width: 100%;
+        height: 100%;
+        z-index: 40;
+        background: rgba(48, 9, 97, 0.3);
+        backdrop-filter: blur(7.5px);
+        &.active {
+            display: block;
+        }
+    }
+}
